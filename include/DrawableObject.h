@@ -5,23 +5,18 @@
 #include "updater.h"
 
 class DrawableObject {
+private:
+	ObjectInformation objectInformation;
+public:
+	DrawableObject(ObjectInformation i_objectInformation);
 
-	ObjectInformation objectI;
+	ObjectInformation getObjectInformation();
 
-	ObjectInformation getObjectInformation() {
-		return objectI;
-	}
+	void setObjectInformation(ObjectInformation i_objectInformation);
 
-	void setObjectInformation(ObjectInformation di) {
-		objectI = di.copy();
-	}
+	void draw(float i_frameTime);
 
-	void draw(float frameTime) {
-		generalDraw(frameTime, getObjectInformation());
-	}
-	void update(float frameTime) {
-		generalUpdate(frameTime, getObjectInformation());
-	}
+	void update(float i_frameTime);
 };
 
 #endif

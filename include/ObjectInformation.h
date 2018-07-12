@@ -2,8 +2,8 @@
 #define DRAW_INFORMATION
 #include "Vec3D.h"
 
-enum UpdateType { Default };
-enum DrawType { Square };
+enum DrawType { d_NONE , d_BRICK };
+enum UpdateType { u_NONE, u_PLATFORM, u_REGULAR };
 
 class ObjectInformation {
 private:
@@ -14,20 +14,22 @@ private:
 	Position position = Position(0.0f, 0.0f);
 
 // DRAW
-	DrawType drawType = Square;
+	DrawType drawType = DrawType(d_NONE);
 	DrawSize drawSize = DrawSize(1.0f, 1.0f);
 	DrawPosition drawPosition = DrawPosition(1.0f, 1.0f);
 	Color color = Color(1.0f, 0.0f, 0.5f);
 
 // UPDATE
-	UpdateType updateType = Default;
+	UpdateType updateType = UpdateType(u_NONE);
 	Direction direction = Direction(0.0f, 1.0f);
 	float speed = 0.0f; // position change per second
 
 public:
 
 // CONSTRUCTOR
-	ObjectInformation(Size size, Position position);
+	ObjectInformation();
+	ObjectInformation(Position i_position, Size i_size);
+	ObjectInformation(Position i_position, Size i_size, DrawType i_drawType, UpdateType i_updateType);
 
 // FUNCTIONALITY
 	ObjectInformation copy();

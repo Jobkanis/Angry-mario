@@ -6,9 +6,20 @@
 /// CONSTRUCTOR /////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-ObjectInformation::ObjectInformation(Size i_size, Position i_position) {
-	position = position.copy();
-	size = size.copy();
+ObjectInformation::ObjectInformation() {
+
+}
+
+ObjectInformation::ObjectInformation(Position i_position, Size i_size) {
+	setPosition(i_position);
+	setSize(i_size);
+}
+
+ObjectInformation::ObjectInformation(Position i_position, Size i_size, DrawType i_drawType, UpdateType i_updateType) {
+	setPosition(i_position);
+	setSize(i_size);
+	setDrawType(i_drawType);
+	setUpdateType(i_updateType);
 }
 
 ///////////////////////////////////////////////////////////////////////

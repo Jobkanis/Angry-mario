@@ -16,9 +16,9 @@ public:
 		vector[1] = i_y;
 		vector[2] = i_z;
 	};
-	inline Vec3D(T i_x, T i_z) {
+	inline Vec3D(T i_x, T i_y) {
 		vector[0] = i_x;
-		vector[1] = i_z;
+		vector[1] = i_y;
 		vector[2] = 1;
 	};
 
