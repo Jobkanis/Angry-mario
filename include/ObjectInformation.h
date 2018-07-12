@@ -51,6 +51,9 @@ public:
 	DrawPosition getDrawPosition();
 	void setDrawPosition(DrawPosition i_drawPosition);
 
+	Color getColor();
+	void setColor(Color i_color);
+
 // UPDATE
 	UpdateType getUpdateType();
 	void setUpdateType(UpdateType i_updateType);

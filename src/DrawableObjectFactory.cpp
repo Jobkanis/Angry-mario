@@ -8,10 +8,14 @@ DrawableObject DrawableObjectFactory::getRegularBrick(Position position) {
 	UpdateType updateType = u_PLATFORM;
 	ObjectInformation objectInformation = ObjectInformation(position, size, drawType, updateType);
 
+
+	// edit
+
+	Color color = getColor(165, 42, 42); // brown
+	objectInformation.setColor(color);
+
 // construct
 	DrawableObject object = DrawableObject(objectInformation);
-
-// edit
 
 // return
 	return object;

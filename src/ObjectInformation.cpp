@@ -68,6 +68,10 @@ DrawSize ObjectInformation::getDrawSize() {
 	return drawSize;
 }
 
+Color ObjectInformation::getColor() {
+	return color;
+}
+
 // UPDATE
 UpdateType ObjectInformation::getUpdateType() {
 	return updateType;
@@ -105,6 +109,10 @@ void ObjectInformation::setDrawSize(DrawSize i_drawSize) {
 
 void ObjectInformation::setDrawPosition(DrawPosition i_drawPosition) { 
 	drawPosition = i_drawPosition.copy(); 
+}
+
+void ObjectInformation::setColor(Color i_color) {
+	color = i_color.copy();
 }
 
 // UPDATE
