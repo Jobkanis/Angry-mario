@@ -1,6 +1,6 @@
 #ifndef DRAW_INFORMATION
 #define DRAW_INFORMATION
-#include "Vec3D.h"
+#include "ObjectGenerator.h"
 
 enum DrawType { d_NONE , d_BRICK };
 enum UpdateType { u_NONE, u_PLATFORM, u_REGULAR };
